@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #f5ede2;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+h1 {
+    color: #c26a3b;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.slogan {
+    text-align: center;
+    color: #8b6b4d;
+    margin: 10px 0 20px;
+}
+
+.nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav a {
+    color: #c26a3b;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 30px 0;
+}
+
+h2 {
+    color: #b45f32;
+    border-left: 5px solid #f3bc7b;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.cat-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.cat-card {
+    background: #fef7e8;
+    padding: 15px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+}
+
+.cat-card h3 {
+    color: #c26a3b;
+    margin-bottom: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 350px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ecdbba;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+button {
+    background: #c26a3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a5522a;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #f1e2cf;
+    color: #8c735c;
+}
+
+max-width: 600px {
+    .cat-list {
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
