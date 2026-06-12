@@ -379,7 +379,7 @@ body.dark-theme .theme-btn {
 /* ===== ПОЛНАЯ ЗАМЕНА АДАПТИВА ДЛЯ ТЕЛЕФОНОВ ===== */
 
 /* Телефоны (до 768px) */
-max-width: 768px {
+@media(max-width: 768px) {
     
     /* Шапка */
     .header {
@@ -425,7 +425,7 @@ max-width: 768px {
     
     /* ФОТО — крупное и нормальное */
     .card-photo-container {
-        width: 150px !important;
+        width: 120px !important;
         height: 150px !important;
         margin: 0 auto 1rem;
     }
@@ -464,8 +464,8 @@ max-width: 768px {
     
     /* Модальное окно */
     .modal-content {
-        width: 95%;
-        padding: 1.2rem;
+        width: 80%;
+        padding: 1.1rem;
     }
     
     .modal-photo {
@@ -485,14 +485,14 @@ max-width: 768px {
 }
 
 /* Маленькие телефоны (до 480px) */
-max-width: 480px {
+@media(max-width: 480px) {
     .card {
         padding: 1rem;
     }
     
     .card-photo-container {
-        width: 120px !important;
-        height: 120px !important;
+        width: 110px !important;
+        height: 110px !important;
     }
     
     .card-title {
