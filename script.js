@@ -325,7 +325,6 @@ function sendToCalendar(name, phone, date, time, guests) {
     
     fetch(CALENDAR_URL, {
         method: 'POST',
-        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     });
