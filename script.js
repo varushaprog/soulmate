@@ -286,7 +286,7 @@ if (savedTheme) {
     applyTheme(savedTheme);
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
-        themeToggle.textContent = savedTheme === 'dark' ? 'Темная тема вкл.' : 'Темная тема выкл.';
+        themeToggle.textContent = savedTheme === 'dark' ? 'Тёмная тема выкл.' : 'Тёмная тема вкл.';
     }
 } else {
     // Если пользователь не выбирал — подстраиваемся под систему
@@ -300,7 +300,7 @@ const themeToggle = document.getElementById('themeToggle');
 // Проверяем сохранённую тему при загрузке
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-theme');
-    themeToggle.textContent = 'Темная тема вкл.';
+    themeToggle.textContent = 'Тёмная тема вкл.';
 }
 
 // Обработчик клика по кнопке
@@ -309,7 +309,7 @@ themeToggle.onclick = function() {
     
     if (document.body.classList.contains('dark-theme')) {
         localStorage.setItem('theme', 'dark');
-        themeToggle.textContent = 'Темная тема вкл.';
+        themeToggle.textContent = 'Тёмная тема вкл.';
     } else {
         localStorage.setItem('theme', 'light');
         themeToggle.textContent = 'Тёмная тема выкл.';
