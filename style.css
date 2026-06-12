@@ -425,11 +425,8 @@ body.dark-theme .theme-btn {
     /* Карусель */
     .carousel {
         min-height: 350px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        display: flex;
-        gap: 0.8rem;
-        padding: 0.5rem 0;
+        gap: 1.5rem;
+        padding: 0.8rem 0;
     }
     
     /* Карточки */
