@@ -560,7 +560,6 @@ body.dark-theme .theme-btn {
 /* ===== ГЛОБАЛЬНЫЙ ЗАПРЕТ ГОРИЗОНТАЛЬНОГО СКРОЛЛА ===== */
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -600,7 +599,7 @@ html, body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        overflow-x: hidden;
+        overflow-x:scroll;
         padding: 0.5rem;
     }
     
