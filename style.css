@@ -65,6 +65,9 @@ body {
 
 .logo {
     font-size: 5rem;
+    word-break: keep-all;
+    white-space: normal;
+    line-height: 1.2;
 }
 
 .tagline {
@@ -132,6 +135,7 @@ body {
     width: 120px;
     height: 120px;
     margin: 0 auto 0.5rem;
+    overflow: hidden;
 }
 
 .card-photo {
@@ -384,3 +388,100 @@ body.dark-theme .theme-btn {
     }
 }
 
+/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ ===== */
+
+/* Для экранов меньше 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    
+    /* Шапка — чтобы не обрезалось */
+    .header {
+        padding: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.6rem; /* чуть меньше размер */
+        word-break: keep-all; /* не разрывать слово */
+    }
+    
+    .tagline {
+        font-size: 0.85rem;
+        white-space: normal; /* разрешить перенос на новую строку */
+    }
+    
+    /* Карточки — чтобы фото не вылезали */
+    .card {
+        width: 200px;
+        min-width: 180px;
+        padding: 0.8rem;
+    }
+    
+    .card-photo-container {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 0.5rem;
+        border-radius: 13%;
+    }
+    
+    .card-photo,
+    .card-photo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-desc {
+        font-size: 0.75rem;
+    }
+    
+    /* Карусель — чтобы можно было листать */
+    .carousel {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .card {
+        scroll-snap-align: start;
+    }
+}
+
+/* Для совсем маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo-area {
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .card {
+        width: 170px;
+        min-width: 160px;
+        padding: 0.6rem;
+    }
+    
+    .card-photo-container {
+        width: 100px;
+        height: 100px;
+        border-radius: 13%;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .booking-container {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+}
