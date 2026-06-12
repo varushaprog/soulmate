@@ -377,7 +377,7 @@ body.dark-theme .theme-btn {
 }
 
 /* Адаптив для мобильных */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     .header-container {
         flex-direction: column;
         text-align: center;
@@ -386,144 +386,67 @@ body.dark-theme .theme-btn {
     .theme-btn {
         margin-top: 10px;
     }
-}
+}*/
 
-/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ ===== */
-
-/* Для экранов меньше 768px (планшеты и телефоны) */
-@media (max-width: 768px) {
+/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ (до 768px) ===== */
+@media(max-width: 768px) {
     
-    /* Шапка — чтобы не обрезалось */
+    /* Шапка */
     .header {
-        padding: 1rem;
+        padding: 1rem 0.5rem;
     }
     
     .logo {
-        font-size: 1.6rem; /* чуть меньше размер */
-        word-break: keep-all; /* не разрывать слово */
+        font-size: 2rem;
     }
     
     .tagline {
-        font-size: 0.85rem;
-        white-space: normal; /* разрешить перенос на новую строку */
+        font-size: 1rem;
     }
     
-    /* Карточки — чтобы фото не вылезали */
-    .card {
-        width: 200px;
-        min-width: 180px;
-        padding: 0.8rem;
+    /* Кнопка темы */
+    .theme-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        margin-top: 10px;
     }
     
-    .card-photo-container {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 0.5rem;
-        border-radius: 13%;
+    /* Заголовки секций */
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
     }
     
-    .card-photo,
-    .card-photo-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    /* Секции */
+    .section {
+        padding: 1rem 0.5rem;
     }
     
-    .card-title {
-        font-size: 1.1rem;
-    }
-    
-    .card-desc {
-        font-size: 0.75rem;
-    }
-    
-    /* Карусель — чтобы можно было листать */
+    /* Карусель */
     .carousel {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        gap: 0.8rem;
+        padding: 0.5rem 0;
     }
     
+    /* Карточки */
     .card {
-        scroll-snap-align: start;
-    }
-}
-
-/* Для совсем маленьких экранов (до 480px) */
-@media (max-width: 480px) {
-    .header-container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .logo-area {
-        text-align: center;
-    }
-    
-    .logo {
-        font-size: 1.4rem;
-    }
-    
-    .card {
-        width: 170px;
         min-width: 160px;
-        padding: 0.6rem;
+        width: 160px;
+        padding: 0.8rem 0.5rem;
     }
     
+    /* Фото в карточках */
     .card-photo-container {
         width: 100px;
         height: 100px;
-        border-radius: 13%;
-    }
-    
-    .section-title {
-        font-size: 1.4rem;
-    }
-    
-    .booking-container {
-        flex-direction: column;
-        padding: 0.5rem;
-    }
-}
-/* ===== Карусели ===== */
-
-/* Для экранов меньше 768px */
-@media (max-width: 768px) {
-    
-    /* Карусель — нормальная высота */
-    .carousel {
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 0.5rem;
-    }
-    
-    .carousel__track {
-        gap: 1rem;
-        padding: 0.25rem;
-    }
-    
-    /* Карточки — компактные, но не приближенные */
-    .card {
-        width: 200px;
-        min-width: 180px;
-        max-width: 220px;
-        padding: 0.8rem 0.6rem;
-        margin: 0;
-    }
-    
-    .card-photo-container {
-        width: 90px;
-        height: 90px;
-        margin: 0 auto 0.5rem;
     }
     
     .card-photo {
         width: 100%;
         height: 100%;
-        object-fit: cover;
     }
     
+    /* Текст в карточках */
     .card-title {
         font-size: 1rem;
         margin: 0.3rem 0;
@@ -531,16 +454,7 @@ body.dark-theme .theme-btn {
     
     .card-desc {
         font-size: 0.7rem;
-        line-height: 1.3;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* не больше 2 строк */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    
-    .card-badge {
-        font-size: 0.65rem;
-        padding: 0.15rem 0.6rem;
+        margin: 0.3rem 0;
     }
     
     .card-price {
@@ -548,52 +462,122 @@ body.dark-theme .theme-btn {
         margin-top: 0.3rem;
     }
     
-    /* Секции — уменьшаем отступы */
-    .section {
-        padding: 1.5rem 0.5rem;
+    /* Форма бронирования */
+    .booking-section {
+        padding: 1rem;
     }
     
-    .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
+    .booking-container {
+        gap: 1rem;
+    }
+    
+    .booking-form {
+        padding: 1rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Модальное окно */
+    .modal-content {
+        width: 95%;
+        padding: 1.2rem;
+    }
+    
+    .modal-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+    .modal-desc {
+        font-size: 0.9rem;
+    }
+    
+    .modal-details {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+    
+    /* Футер */
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
     }
 }
 
-/* Для очень маленьких экранов (до 480px) */
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) ===== */
 @media (max-width: 480px) {
+    
+    /* Шапка */
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .tagline {
+        font-size: 0.85rem;
+    }
+    
+    /* Карточки ещё меньше */
     .card {
-        width: 170px;
-        min-width: 160px;
+        min-width: 140px;
+        width: 140px;
         padding: 0.6rem 0.4rem;
     }
     
     .card-photo-container {
-        width: 75px;
-        height: 75px;
+        width: 80px;
+        height: 80px;
     }
     
     .card-title {
         font-size: 0.9rem;
     }
     
-    .carousel__track {
-        gap: 0.8rem;
+    .card-desc {
+        font-size: 0.6rem;
     }
     
-    .section {
-        padding: 1rem 0.25rem;
+    /* Заголовки */
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    /* Модальное окно */
+    .modal-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .modal-title {
+        font-size: 1.1rem;
     }
 }
 
-/* Для планшетов (между 600px и 900px) */
-@media (min-width: 600px) and (max-width: 900px) {
+/* ===== САМЫЕ МАЛЕНЬКИЕ (до 380px) ===== */
+@media(max-width: 380px) {
     .card {
-        width: 220px;
-        min-width: 200px;
+        min-width: 130px;
+        width: 130px;
     }
     
     .card-photo-container {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .card-title {
+        font-size: 0.8rem;
     }
 }
