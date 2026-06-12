@@ -431,7 +431,7 @@ body.dark-theme .theme-btn {
     
     /* Карточки */
     .card {
-        min-width: 160px;
+        width: 160px;
         width: 160px;
         height: 95px;
         padding: 0.8rem 0.5rem;
