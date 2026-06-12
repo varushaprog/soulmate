@@ -309,9 +309,59 @@ themeToggle.onclick = function() {
     
     if (document.body.classList.contains('dark-theme')) {
         localStorage.setItem('theme', 'dark');
-        themeToggle.textContent = 'Светлая тема';
+        themeToggle.textContent = 'Темная тема вкл.';
     } else {
         localStorage.setItem('theme', 'light');
-        themeToggle.textContent = 'Тёмная тема';
+        themeToggle.textContent = 'Тёмная тема выкл.';
     }
 };
+
+// Google Calendar URL
+const CALENDAR_URL = 'https://script.google.com/macros/s/AKfycbwoCZZW_fj16Q6QnPnXmtZ9bHgvGb_TnZlyVZqOlvC1QmICaMl3kxFdD8TzddM0Y-Gfew/exec';
+
+// Функция отправки в календарь
+function sendToCalendar(name, phone, date, time, guests) {
+    const data = { name, phone, date, time, guests };
+    
+    fetch(CALENDAR_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+}
+
+// Изменяем отправку формы
+const formCalendar = document.getElementById('bookingForm');
+if (formCalendar) {
+    formCalendar.onsubmit = function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const guests = document.getElementById('guests').value;
+        
+        if (!name || !phone) {
+            msgBox.innerHTML = 'Заполните имя и телефон!';
+            msgBox.style.color = 'red';
+            return;
+        }
+        
+        if (!date || !time) {
+            msgBox.innerHTML = 'Выберите дату и время!';
+            msgBox.style.color = 'red';
+            return;
+        }
+        
+        // Отправляем в календарь
+        sendToCalendar(name, phone, date, time, guests);
+        
+        msgBox.innerHTML = 'Спасибо, ' + name + '! Бронь добавлена в календарь. Ждём вас!';
+        msgBox.style.color = 'green';
+        formCalendar.reset();
+        
+        setTimeout(() => msgBox.innerHTML = '', 5000);
+    };
+}
