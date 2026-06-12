@@ -485,3 +485,115 @@ body.dark-theme .theme-btn {
         padding: 0.5rem;
     }
 }
+/* ===== Карусели ===== */
+
+/* Для экранов меньше 768px */
+@media (max-width: 768px) {
+    
+    /* Карусель — нормальная высота */
+    .carousel {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+    }
+    
+    .carousel__track {
+        gap: 1rem;
+        padding: 0.25rem;
+    }
+    
+    /* Карточки — компактные, но не приближенные */
+    .card {
+        width: 200px;
+        min-width: 180px;
+        max-width: 220px;
+        padding: 0.8rem 0.6rem;
+        margin: 0;
+    }
+    
+    .card-photo-container {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 0.5rem;
+    }
+    
+    .card-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        margin: 0.3rem 0;
+    }
+    
+    .card-desc {
+        font-size: 0.7rem;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* не больше 2 строк */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .card-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.6rem;
+    }
+    
+    .card-price {
+        font-size: 1rem;
+        margin-top: 0.3rem;
+    }
+    
+    /* Секции — уменьшаем отступы */
+    .section {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .card {
+        width: 170px;
+        min-width: 160px;
+        padding: 0.6rem 0.4rem;
+    }
+    
+    .card-photo-container {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .card-title {
+        font-size: 0.9rem;
+    }
+    
+    .carousel__track {
+        gap: 0.8rem;
+    }
+    
+    .section {
+        padding: 1rem 0.25rem;
+    }
+}
+
+/* Для планшетов (между 600px и 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .card {
+        width: 220px;
+        min-width: 200px;
+    }
+    
+    .card-photo-container {
+        width: 100px;
+        height: 100px;
+    }
+}
