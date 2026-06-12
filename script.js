@@ -317,7 +317,7 @@ themeToggle.onclick = function() {
 };
 
 // Google Calendar URL
-const CALENDAR_URL = 'https://script.google.com/macros/s/AKfycbwoCZZW_fj16Q6QnPnXmtZ9bHgvGb_TnZlyVZqOlvC1QmICaMl3kxFdD8TzddM0Y-Gfew/exec';
+const CALENDAR_URL = 'https://script.google.com/macros/s/AKfycbwhiPB32cHFBKil-iIEctQwsJPmxpEauNl84HfQLEo9aHg5k0rD2gyNfKGwjgSUOhb2HA/exec';
 
 // Функция отправки в календарь
 function sendToCalendar(name, phone, date, time, guests) {
