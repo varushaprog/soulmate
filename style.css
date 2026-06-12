@@ -424,7 +424,7 @@ body.dark-theme .theme-btn {
     
     /* Карусель */
     .carousel {
-        min-height: 250px;
+        min-height: 350px;
         overflow-x: auto;
         overflow-y: hidden;
         display: flex;
